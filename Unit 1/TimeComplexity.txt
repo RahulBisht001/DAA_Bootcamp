@@ -1,0 +1,58 @@
+# Time Complexity
+
+.     O(1) < O(log(log(n))) < O(log(n)) < O(n^1/2) < O(n) 
+.  < O(n*log(n)) <  O(n^2) < O(n^3)  < O(n^k) < O(2^n)  < O(n^n) < O(2^2^n)
+
+.       t 
+
+.       |
+.       |
+.       |
+.       |   
+.       | 
+.       |_____________________ n
+
+
+# 
+> Time Complexity of Famous Algorithms
+
+Binary Search   ---->  log(n)
+Linear Search   ---->  O(n)
+Quick Sort      ---->  O(n*log(n))
+Merge Sort      ---->  O(n*log(n))
+Bubble Sort     ---->  O(n^2)
+Selection Sort  ---->  O(n^2)
+Insertion Sort  ---->  O(n^2)
+Heap Sort       ---->  O(n*log(n))
+
+---------------------------------------------
+> 
+Height of CBT   ---->  O(log(n))
+Insertion in Heap ----> O(log(n))
+Construction of Heap ----> O(n*log(n))
+Delete From  Heap    ----> O(log(n) (base 2))
+Huffman              ----> O(n*log(n))
+
+-----------   Graph Algorithms  ------------
+
+> Prims and Kruskal's  
+|
+----> using Matrix  ---->O(n^2)
+using heap   ----> O(v+E)*log(v)
+
+> DFS and  BFS
+|
+----> O(V+E)
+
+> Floyd Warshall Algorithms
+|
+----> O(n^3)
+
+> Dijkstra Algo
+|
+----> O(V^2)
+
+
+
+
+## Questions ______

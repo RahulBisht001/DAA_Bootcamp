@@ -1,0 +1,32 @@
+# Algorithm
+____________
+|
+--> Finite Set of steps to solve a Problem is called Algorithm
+Algorithm should be Unambiguous 
+
+> Analysis is Process of comparing two Algorithm with respect to time , space etc
+
+ex: Algo __
+
+Step 1 : Read a
+Step 2 : Read b
+Step 3 : sum -> a+b
+Step 4 : print sum
+
+________________  Types of Analysis ________________
+.                    /        \
+.                   /          \
+.            Priory            Posterior
+.        (Before execution)     (After execution)
+.             |                         |          
+.             |                         |
+.      Number of iterations         Dependent on Hardware
+.   hardware Independent                 
+.   Approximate value (but Uniform)         Exact Value        
+
+
+
+>    # Asymptotic Notation
+1. Big Oh
+2. Big Omega 
+3. Big Theta

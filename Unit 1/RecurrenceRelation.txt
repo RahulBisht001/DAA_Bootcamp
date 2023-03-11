@@ -1,0 +1,20 @@
+# What is Recurrence Relation ?
+
+.    A recurrence relation is an equation which represents a sequence
+based on some rule. It helps in finding the subsequent term (next term) dependent upon 
+the preceding term (previous term). If we know the previous term in a given series,
+then we can easily determine the next term.
+
+
+Ex. Binary search
+.                 n
+.              /     \
+.             /       \
+.           n/2        n/2
+.          /    \     /   \
+.        n/4   n/4   n/4   n/4
+
+Type 1: Divide and conquer recurrence relations 
+Type 2: Linear recurrence relations 
+Type 3: Value substitution before solving 
+

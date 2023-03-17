@@ -13,7 +13,7 @@ Step 2 : Read b
 Step 3 : sum -> a+b
 Step 4 : print sum
 
-________________  Types of Analysis ________________
+________________  Types of Analysis  ________________
 .                    /        \
 .                   /          \
 .            Priory            Posterior

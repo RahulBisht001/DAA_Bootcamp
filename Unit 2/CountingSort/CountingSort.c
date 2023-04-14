@@ -66,7 +66,7 @@ void printArray(int arr[], int size)
 // Driver code
 int main()
 {
-    int arr[] = {4, 2, 2, 8, 3, 3, 1};
+    int arr[] = {4, 2, -2, 8, -3, 3, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     printf("Unsorted Array \n");
@@ -77,3 +77,63 @@ int main()
     printf("Sorted Array \n");
     printArray(arr, n);
 }
+
+// #include <stdio.h> // QUESTION - 3
+// #include <limits.h>
+// #include <stdlib.h>
+// int maxEle(int arr[], int n)
+// {
+//     int max = INT_MIN;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] > max)
+//             max = arr[i];
+//     }
+//     return max;
+// }
+// void countSort(int arr[], int n)
+// {
+//     int i, j;
+//     int maximum = maxEle(arr, n);
+//     int *countArray = (int *)malloc((maximum + 1) * sizeof(int));
+//     for (int i = 0; i <= maximum; i++)
+//         countArray[i] = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         countArray[arr[i]]++;
+//     }
+//     i = 0;
+//     j = 0;
+//     while (i <= maximum)
+//     {
+//         if (countArray[i] > 0)
+//         {
+//             arr[j] = i;
+//             countArray[i]--;
+//             j++;
+//         }
+//         else
+//             i++;
+//     }
+// }
+// int main()
+// {
+
+//     int size = 0, i, key;
+//     printf("Enter the size of array : ");
+//     scanf("%d", &size);
+//     int arr[size];
+//     printf("Enter the values of an array : ");
+//     for (i = 0; i < size; i++)
+//         scanf("%d", &arr[i]);
+//     printf("Enter the key index : ");
+//     scanf("%d", &key);
+//     printf("After count sort...... : ");
+//     countSort(arr, size);
+//     for (i = 0; i < size; i++)
+//         printf("%d ", arr[i]);
+//     printf("\nThe %dth smallest element in the array is : %d ", key, arr[key - 1]);
+//     printf("\n");
+
+//     return 0;
+// }

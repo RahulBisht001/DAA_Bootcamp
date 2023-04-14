@@ -197,6 +197,7 @@ void mergeSort(int arr[], int l, int r)
         merge(arr, l, m, r);
     }
 }
+
 int main()
 {
     int arr[] = {-60, -34, -23, -12, -5, -1};
@@ -219,3 +220,65 @@ int main()
 }
 
 */
+
+#include <stdio.h>
+#include <limits.h>
+
+int getMax(int arr[], int n)
+{
+    int max = INT_MIN;
+    for (int i = 0; i < n; ++i)
+    {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+
+void countSort(int arr[], int n)
+{
+    int maxNum = getMax(arr, n);
+    int countArr[maxNum + 1];
+
+    for (int i = 0; i <= maxNum; ++i)
+        countArr[i] = 0;
+
+    for (int i = 0; i < n; ++i)
+    {
+        countArr[arr[i]]++;
+    }
+
+    int i = 0, j = 0;
+    while (i <= maxNum)
+    {
+        if (countArr[i] > 0)
+        {
+            countArr[i]--;
+            arr[j] = i;
+            j++;
+        }
+        else
+            i++;
+    }
+}
+
+int main()
+{
+    int arr[] = {10, 5, 7, 2, 3, 9};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Unsorted array: \n");
+    for (int i = 0; i < n; ++i)
+    {
+        printf("%d  ", arr[i]);
+    }
+
+    printf("\n");
+    countSort(arr, n);
+
+    printf("Sorted array: \n");
+    for (int i = 0; i < n; ++i)
+    {
+        printf("%d  ", arr[i]);
+    }
+}

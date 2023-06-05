@@ -1,15 +1,26 @@
-- [X] DFS
-- [X] BFS
-- [X] cycle in a undirected graph
-- [ ] cycle in a directed graph
-- [X] Topological Sort using DFS
-- [X] Topological Sort using BFS
-- [ ] Prim's Algo
-- [ ] Kruskal's Algo
-- [ ] Dijkstra's Algo
-- [ ] Kosaraju's Algo
-- [ ] Bellman Ford Algo
-- [ ] Floyd warshall Algo
+<input type="checkbox" >  DFS
+
+<input type="checkbox" >  BFS
+
+<input type="checkbox" >  cycle in a undirected graph
+
+<input type="checkbox" >  cycle in a directed graph
+
+<input type="checkbox" >  Topological Sort using DFS
+
+<input type="checkbox" >  Topological Sort using BFS
+
+<input type="checkbox" >  Prim's 
+
+<input type="checkbox" >  Kruskal's Algo
+
+<input type="checkbox" >  Dijkstra's Algo
+
+<input type="checkbox" >  Kosaraju's Algo
+
+<input type="checkbox" >  Bellman Ford Algo
+
+<input type="checkbox" >  Floyd warshall Algo
 
 
 Questions

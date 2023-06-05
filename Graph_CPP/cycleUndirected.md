@@ -25,7 +25,7 @@ class Solution {
                     return true;
             }
             else if(a != parent){
-                return  true;
+                return true;
             }
         }
         return false;

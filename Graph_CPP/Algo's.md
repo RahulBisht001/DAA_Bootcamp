@@ -1,7 +1,5 @@
 - [X] DFS
 - [X] BFS
-- [X] cycle in a undirected graph
-- [ ] cycle in a directed graph
 - [X] Topological Sort using DFS
 - [X] Topological Sort using BFS
 - [ ] Prim's Algo
@@ -11,7 +9,19 @@
 - [ ] Bellman Ford Algo
 - [ ] Floyd warshall Algo
 
-Questions
+Graph Questions
 -------------------
 
 - [ ] Path Exist
+- [X] Cycle in a undirected graph
+- [ ] Cycle in a directed graph
+- [ ] Shortest path btw Nodes
+- [ ] Graph is Bipartite or not
+
+
+DP Questions 
+-------------------
+
+- [ ] Matrix chain multiplication 
+- [ ] ugly Number
+- [ ] knapsack problem

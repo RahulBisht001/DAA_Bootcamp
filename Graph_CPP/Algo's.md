@@ -12,7 +12,7 @@
 Graph Questions
 -------------------
 
-- [ ] Path Exist
+- [X] Path Exist
 - [X] Cycle in a undirected graph
 - [ ] Cycle in a directed graph
 - [ ] Shortest path btw Nodes
@@ -23,5 +23,6 @@ DP Questions
 -------------------
 
 - [ ] Matrix chain multiplication 
-- [ ] ugly Number
-- [ ] knapsack problem
+- [X] ugly Number
+- [X] nth Ugly number
+- [X] knapsack problem

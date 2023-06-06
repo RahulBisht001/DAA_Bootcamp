@@ -1,6 +1,6 @@
 Detect cycle in a Directed graph
 
-```
+```cpp
 
 class Solution {
   public:

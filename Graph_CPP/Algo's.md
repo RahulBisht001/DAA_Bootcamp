@@ -14,9 +14,9 @@ Graph Questions
 
 - [X] Path Exist
 - [X] Cycle in a undirected graph
-- [ ] Cycle in a directed graph
+- [X] Cycle in a directed graph
 - [ ] Shortest path btw Nodes
-- [ ] Graph is Bipartite or not
+- [X] Graph is Bipartite or not
 
 
 

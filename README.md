@@ -1,4 +1,4 @@
-# DAA-Bootcamp
+##  DAA-Bootcamp
 
 * Binary Search Recurrence Relation : `T(n) = T(n/2) + 1` 
 where `T(n)` is the time required for binary search in an array of size n.

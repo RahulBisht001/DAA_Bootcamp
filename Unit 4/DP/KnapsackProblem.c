@@ -68,15 +68,19 @@ int knapsack(int W, int wt[], int val[], int n)
 
 int main()
 {
-    int val[] = {60, 100, 120};
-    int wt[] = {10, 20, 30};
-    int W = 50;
-    int n = sizeof(val) / sizeof(val[0]);
+    int t = 5;
+    while (t-- != 0)
+    {
+        int val[] = {60, 100, 120};
+        int wt[] = {10, 20, 30};
+        int W = 50;
+        int n = sizeof(val) / sizeof(val[0]);
 
-    memset(dp, -1, sizeof(dp));
-    int result = knapsack(W, wt, val, n);
+        memset(dp, -1, sizeof(dp));
+        int result = knapsack(W, wt, val, n);
 
-    printf("Maximum value: %d\n", result);
+        printf("Maximum value: %d\n", result);
+    }
 
     return 0;
 }

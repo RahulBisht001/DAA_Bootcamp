@@ -12,3 +12,16 @@ because we need to sort the subArray of size `n-1` and partition the array of si
 * Recurrence Relation of Merge Sort : `T(n)=2T(n/2) + An`
 
 * Recurrence Relation of Fibonacci series : `T(n) = T(n−1) + T(n−2)`
+
+
+- [X] fibonacci series
+- [X] tower of hanoi
+- [ ] jump search
+- [ ] quick sort
+- [ ] merge sort
+- [ ] heap sort
+- [ ] 0/1 Knapsack problem 
+- [ ] Longest common subsequence,
+- [ ] Matrix chain multiplication
+- [X] Hashing, HashFunction and Collisions
+- [ ] String Matching

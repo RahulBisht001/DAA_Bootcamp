@@ -101,18 +101,38 @@ Similarities or patterns in the input data can lead to collisions. Even small di
 
 If the hash table is not large enough to accommodate all possible input values without collisions, collisions are likely to occur.
 
+
 #### Handling Collisions:
+
 Collisions are expected in hashing, and various techniques are used to handle them. The most common approaches include:
 
-1. Chaining: In chaining, each slot in the hash table contains a linked list or another data structure. When a collision occurs, the colliding elements are stored in the same slot, forming a chain. During retrieval, the chain is traversed to find the desired element. Chaining is simple to implement and handles collisions effectively, but it may introduce additional memory overhead.
+1. Chaining:
 
-2. Open Addressing: In open addressing, all elements are stored in the hash table itself, and if a collision occurs, an alternative slot is found within the table to store the colliding element. Common open addressing techniques include linear probing (checking the next available slot sequentially), quadratic probing (using a quadratic function to probe slots), and double hashing (using a second hash function to determine the next slot). Open addressing requires careful handling of the probing sequence to avoid clustering and ensure efficient retrieval.
+In chaining, each slot in the hash table contains a linked list or another data structure. When a collision occurs, the colliding elements are stored in the same slot, forming a chain. During retrieval, the chain is traversed to find the desired element. Chaining is simple to implement and handles collisions effectively, but it may introduce additional memory overhead.
 
-3. Robin Hood Hashing: Robin Hood hashing is a variation of open addressing that aims to minimize the variance of probe lengths. When a collision occurs, the element is placed in the slot that is closer to the ideal or expected position. During retrieval, elements are searched by comparing the distance from the ideal position, giving priority to elements with shorter probe lengths.
+2. Open Addressing:
 
-4. Cuckoo Hashing: Cuckoo hashing is another open addressing technique that uses two or more hash functions and multiple hash tables. When a collision occurs, the colliding element is evicted and placed in an alternate hash table using one of the other hash functions. This process continues until all elements find a suitable place or a maximum number of relocations is reached.
+In open addressing, all elements are stored in the hash table itself, and if a collision occurs,
+an alternative slot is found within the table to store the colliding element. Common open 
+addressing techniques include linear probing (checking the next available slot sequentially), quadratic probing (using a quadratic function to probe slots), and double hashing (using a second hash function to determine the next slot). Open addressing requires careful handling of the 
+probing sequence to avoid clustering and ensure efficient retrieval.
 
-These collision handling techniques aim to minimize the impact of collisions on the efficiency and performance of hash tables. The choice of technique depends on factors like the expected load factor, the desired retrieval time, and the characteristics of the data being hashed.
+3. Robin Hood Hashing:
+
+Robin Hood hashing is a variation of open addressing that aims to minimize the variance of 
+probe lengths. When a collision occurs, the element is placed in the slot that is closer to 
+the ideal or expected position. During retrieval, elements are searched by comparing the 
+distance from the ideal position, giving priority to elements with shorter probe lengths.
+
+4. Cuckoo Hashing:
+
+Cuckoo hashing is another open addressing technique that uses two or more hash functions and multiple hash tables. When a collision occurs, the colliding element is evicted and placed 
+in an alternate hash table using one of the other hash functions. This process continues 
+until all elements find a suitable place or a maximum number of relocations is reached.
+
+These collision handling techniques aim to minimize the impact of collisions on the efficiency 
+and performance of hash tables. The choice of technique depends on factors like the expected 
+load factor, the desired retrieval time, and the characteristics of the data being hashed.
 
 
 

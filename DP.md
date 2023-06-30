@@ -38,8 +38,54 @@ Bottom-up DP, also known as tabulation, involves solving the sub problems iterat
 
 Tabulation and memoization are two different approaches used in DP to solve problems.
 
-Tabulation involves solving the sub problems iteratively, starting from the smallest sub problems and building up to the main problem. The results of sub problems are stored in a table or array. Tabulation eliminates recursion and ensures that all necessary sub problems are solved before solving the current subproblem. It is generally more efficient in terms of memory usage and function call overhead.
+Tabulation and memoization are two different approaches used in dynamic programming (DP) to solve problems. Let's compare them on various points:
 
-Memoization, on the other hand, involves solving the sub problems recursively and storing the results in a data structure (e.g., an array or hash table) to avoid redundant calculations. When a subproblem needs to be solved, the stored result is retrieved instead of recomputing it. Memoization can be more intuitive and easier to implement compared to tabulation, but it may introduce some overhead due to function calls and the use of additional data structures.
+1. Implementation: 
 
-In summary, both tabulation and memoization are techniques used in DP to solve optimization problems efficiently. The choice between them depends on the problem's characteristics, programming language, performance requirements, and personal preference.
+   - Tabulation: 
+   
+   In tabulation, the sub problems are solved iteratively, and the results are stored in a table or array. The solution is built up in a bottom-up manner, starting from the smallest sub problems and progressing towards the main problem.
+
+   - Memoization: 
+
+   In memoization, the sub problems are solved recursively, and the results are stored in a data structure (e.g., an array or hash table). The results are retrieved from the data structure whenever a subproblem needs to be solved, avoiding redundant calculations.
+
+2. Computation Order:
+
+   - Tabulation: 
+   
+   Tabulation computes the solutions to sub problems in a systematic order, ensuring that all necessary sub problems are solved before solving the current subproblem. It follows a deterministic order defined by the problem's structure.
+
+   - Memoization: 
+   
+   Memoization computes the solutions to sub problems on-demand, based on the recursive calls made during the computation. It doesn't follow a specific order defined by the problem's structure.
+
+3. Space Complexity:
+
+   - Tabulation:
+   
+    Tabulation typically requires a table or array to store the results of sub problems. The space complexity depends on the number of sub problems and the size of the table. In some cases, it may be possible to optimize the space usage by using only a portion of the table.
+
+   - Memoization: 
+   
+   Memoization requires a data structure (e.g., an array or hash table) to store the results of sub problems. The space complexity depends on the number of sub problems that are memoized. It can be more memory-efficient than tabulation if only a subset of sub problems is actually needed.
+
+4. Time Complexity:
+
+   - Tabulation: 
+   
+   The time complexity of tabulation depends on the number of sub problems and the time required to solve each subproblem. It typically involves a loop that iterates over the sub problems, so the time complexity is often proportional to the number of sub problems multiplied by the time complexity of solving each subproblem.
+
+   - Memoization: 
+   
+   The time complexity of memoization depends on the number of unique sub problems encountered during the computation. It avoids redundant calculations by retrieving the results from the data structure, which can lead to better time complexity than tabulation in some cases.
+
+5. Flexibility:
+   - Tabulation: Tabulation provides a systematic and deterministic approach to solve sub problems. It is generally more suited for problems where the computation order is well-defined and can be determined in advance.
+   - Memoization: Memoization is more flexible as it can handle problems with complex computation orders, recursive structures, or problems where the optimal solution may not follow a specific order. It allows for a more intuitive and natural expression of the problem's recursive nature.
+
+6. Function Call Overhead:
+   - Tabulation: Tabulation eliminates the need for recursive function calls, resulting in lower function call overhead. It is particularly beneficial in languages with expensive function call operations.
+   - Memoization: Memoization involves recursive function calls, which may introduce additional overhead due to the function call stack. However, modern programming languages often optimize function calls, reducing the impact of this overhead.
+
+In summary, tabulation and memoization are both powerful techniques in dynamic programming, and their choice depends on the problem's characteristics, programming language, performance requirements, and personal preference. Tabulation offers a systematic approach with better control over computation order and lower function call overhead, while memoization provides flexibility and can handle more complex problem structures with potentially better space complexity.

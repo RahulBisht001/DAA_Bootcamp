@@ -29,9 +29,9 @@ The study of NP-completeness has led to the development of approximation algorit
 
 ## Short Notes on 
 
-### A. Classes of problems and importance of NP-Completeness:
-### B. P, NP-hard, and NP-Complete problems:
-### C. Polynomial time and Polynomial time verification:
+* A. Classes of problems and importance of NP-Completeness:
+* B. P, NP-hard, and NP-Complete problems:
+* C. Polynomial time and Polynomial time verification:
 
 
 

@@ -25,3 +25,5 @@ because we need to sort the subArray of size `n-1` and partition the array of si
 - [ ] Matrix chain multiplication
 - [X] Hashing, HashFunction and Collisions
 - [ ] String Matching
+- [ ] The subset-sum problem
+- [ ] The traveling salesman problem

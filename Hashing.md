@@ -31,6 +31,17 @@ used in various applications like data integrity checks, data comparisons, and c
 
 ### What is Hash Function ?
 
+
+```c
+int hashFunction(char* key, int arraySize) {
+    int sum = 0;
+    for (int i = 0; key[i] != '\0'; i++) {
+        sum += key[i];
+    }
+    return sum % arraySize;
+}
+```
+
 A hash function is a mathematical function / algorithm that takes an input (or "key") and produces
 a fixed-size output, typically a hash code or hash value. The purpose of a hash function is to efficiently map data of arbitrary size to a fixed-size value.
 
@@ -110,12 +121,78 @@ Collisions are expected in hashing, and various techniques are used to handle th
 
 In chaining, each slot in the hash table contains a linked list or another data structure. When a collision occurs, the colliding elements are stored in the same slot, forming a chain. During retrieval, the chain is traversed to find the desired element. Chaining is simple to implement and handles collisions effectively, but it may introduce additional memory overhead.
 
+Example:
+Let's consider a simple implementation of a hash table using chaining in C language:
+
+```c
+#define ARRAY_SIZE 10
+
+typedef struct Node {
+    char* key;
+    int value;
+    struct Node* next;
+} Node;
+
+Node* hashTable[ARRAY_SIZE];
+
+void insert(char* key, int value) {
+    int index = hashFunction(key, ARRAY_SIZE);
+    Node* newNode = malloc(sizeof(Node));
+    newNode->key = key;
+    newNode->value = value;
+    newNode->next = NULL;
+    
+    if (hashTable[index] == NULL) {
+        hashTable[index] = newNode;
+    } else {
+        Node* curr = hashTable[index];
+        while (curr->next != NULL) {
+            curr = curr->next;
+        }
+        curr->next = newNode;
+    }
+}
+```
+
 2. Open Addressing:
 
 In open addressing, all elements are stored in the hash table itself, and if a collision occurs,
 an alternative slot is found within the table to store the colliding element. Common open 
 addressing techniques include linear probing (checking the next available slot sequentially), quadratic probing (using a quadratic function to probe slots), and double hashing (using a second hash function to determine the next slot). Open addressing requires careful handling of the 
 probing sequence to avoid clustering and ensure efficient retrieval.
+ 
+                            OR 
+                            
+Open addressing is another collision handling technique where the colliding data elements are 
+stored in alternative locations within the hash table itself. When a collision occurs, the 
+algorithm probes for an empty slot by applying a specific sequence of steps (e.g., linear probing, quadratic probing, or double hashing).
+
+Example:
+Here's an example of implementing a hash table using open addressing with linear probing in C language:
+
+```c
+#define ARRAY_SIZE 10
+
+typedef struct {
+    char* key;
+    int value;
+} Entry;
+
+Entry hashTable[ARRAY_SIZE];
+
+void insert(char* key, int value) {
+    int index = hashFunction(key, ARRAY_SIZE);
+    int i = index;
+    int step = 1;
+    while (hashTable[i].key != NULL) {
+        i = (index + step) % ARRAY_SIZE;
+        step++;
+    }
+    hashTable[i].key = key;
+    hashTable[i].value = value;
+}
+```
+
 
 3. Robin Hood Hashing:
 
